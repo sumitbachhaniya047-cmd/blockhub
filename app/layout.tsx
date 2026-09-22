@@ -26,25 +26,52 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://blockhub-tau.vercel.app"),
+
   title: {
     default: "BlockHub — Learn. Build. Grow.",
     template: "%s | BlockHub"
   },
+
   description:
-    "BlockHub helps students discover courses, projects, certificates, internships and career roadmaps — all in one place.",
+    "BlockHub helps students discover programming courses, projects, certificates, internships and career roadmaps — all in one place.",
+
   keywords: [
     "BlockHub",
-    "student learning platform",
     "free programming courses",
-    "career roadmaps",
+    "coding courses for students",
     "student internships",
     "programming certificates",
-    "college students",
-    "coding courses"
+    "career roadmaps",
+    "DSA courses",
+    "web development courses",
+    "AI ML courses",
+    "college student resources"
   ],
+
   authors: [{ name: "Sumit Bachhaniya" }],
   creator: "Sumit Bachhaniya",
   applicationName: "BlockHub",
+
+  alternates: {
+    canonical: "/"
+  },
+
+  openGraph: {
+    type: "website",
+    url: "https://blockhub-tau.vercel.app/",
+    siteName: "BlockHub",
+    title: "BlockHub — Learn. Build. Grow.",
+    description:
+      "Discover courses, projects, certificates, internships and career roadmaps for students.",
+    locale: "en_IN"
+  },
+
+  robots: {
+    index: true,
+    follow: true
+  },
+
   verification: {
     google: "SB-gz9Y8xKqhX0lgwpdXwZHZvump1FKYv3xePggoBMg"
   }
