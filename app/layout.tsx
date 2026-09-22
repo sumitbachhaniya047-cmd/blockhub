@@ -44,7 +44,10 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Sumit Bachhaniya" }],
   creator: "Sumit Bachhaniya",
-  applicationName: "BlockHub"
+  applicationName: "BlockHub",
+  verification: {
+    google: "SB-gz9Y8xKqhX0lgwpdXwZHZvump1FKYv3xePggoBMg"
+  }
 };
 
 export default function RootLayout({
