@@ -26,7 +26,12 @@ export function CertificatesPageClient() {
     return certificates.filter((c) => {
       if (provider !== "All" && c.provider !== provider) return false;
       if (cost !== "All" && c.costStatus !== cost) return false;
-      if (query.trim() && !c.programName.toLowerCase().includes(query.toLowerCase())) return false;
+      if (
+        query.trim() &&
+        !c.programName.toLowerCase().includes(query.toLowerCase())
+      ) {
+        return false;
+      }
       return true;
     });
   }, [provider, cost, query]);
@@ -34,18 +39,32 @@ export function CertificatesPageClient() {
   return (
     <div className="container-content py-10">
       <div className="mb-8">
-        <h1 className="font-display text-3xl font-bold text-ink-900">Certificate opportunities</h1>
+        <h1 className="font-display text-3xl font-bold text-ink-900">
+          Certificate opportunities
+        </h1>
+
         <p className="mt-1.5 max-w-2xl text-sm text-ink-500">
-          Every listing links to the provider's own page. We never issue certificates ourselves, and we don't claim
-          something is free unless it's been checked directly against the provider.
+          Every listing links to the provider&apos;s own page. We never issue
+          certificates ourselves, and we don&apos;t claim something is free
+          unless it&apos;s been checked directly against the provider.
         </p>
+
         <div className="mt-5 max-w-lg">
-          <SearchBar size="md" placeholder="Search by program name" onSearch={setQuery} />
+          <SearchBar
+            size="md"
+            placeholder="Search by program name"
+            onSearch={setQuery}
+          />
         </div>
       </div>
 
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-[240px_1fr]">
-        <CertificateFilters activeProvider={provider} activeCost={cost} onProviderChange={setProvider} onCostChange={setCost} />
+        <CertificateFilters
+          activeProvider={provider}
+          activeCost={cost}
+          onProviderChange={setProvider}
+          onCostChange={setCost}
+        />
 
         <div>
           {loading ? (
@@ -58,7 +77,10 @@ export function CertificatesPageClient() {
             />
           ) : (
             <>
-              <p className="mb-4 text-sm text-ink-500">{filtered.length} opportunities</p>
+              <p className="mb-4 text-sm text-ink-500">
+                {filtered.length} opportunities
+              </p>
+
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
                 {filtered.map((c) => (
                   <CertificateCard key={c.id} certificate={c} />

@@ -14,7 +14,8 @@ import { SearchX } from "lucide-react";
 
 export function CoursesPageClient() {
   const searchParams = useSearchParams();
-  const initialCategory = (searchParams.get("category") as Category | null) ?? "All";
+  const initialCategory =
+    (searchParams.get("category") as Category | null) ?? "All";
 
   const [category, setCategory] = useState<Category | "All">(initialCategory);
   const [level, setLevel] = useState<Level | "All">("All");
@@ -28,7 +29,9 @@ export function CoursesPageClient() {
   useEffect(() => {
     setLoading(true);
     setFailed(false);
+
     const timer = setTimeout(() => setLoading(false), 450);
+
     return () => clearTimeout(timer);
   }, [category, level, freeOnly, query]);
 
@@ -37,12 +40,19 @@ export function CoursesPageClient() {
       if (category !== "All" && c.category !== category) return false;
       if (level !== "All" && c.level !== level) return false;
       if (freeOnly && !c.isFree) return false;
+
       if (query.trim()) {
         const q = query.toLowerCase();
-        if (!c.title.toLowerCase().includes(q) && !c.creator.name.toLowerCase().includes(q) && !c.tags.some((t) => t.includes(q))) {
+
+        if (
+          !c.title.toLowerCase().includes(q) &&
+          !c.creator.name.toLowerCase().includes(q) &&
+          !c.tags.some((t) => t.includes(q))
+        ) {
           return false;
         }
       }
+
       return true;
     });
   }, [category, level, freeOnly, query]);
@@ -50,12 +60,21 @@ export function CoursesPageClient() {
   return (
     <div className="container-content py-10">
       <div className="mb-8">
-        <h1 className="font-display text-3xl font-bold text-ink-900">Course directory</h1>
+        <h1 className="font-display text-3xl font-bold text-ink-900">
+          Course directory
+        </h1>
+
         <p className="mt-1.5 text-sm text-ink-500">
-          Every course links to its original creator or platform — we don't host or re-upload any video content.
+          Every course links to its original creator or platform — we
+          don&apos;t host or re-upload any video content.
         </p>
+
         <div className="mt-5 max-w-lg">
-          <SearchBar size="md" placeholder="Search by course, creator or topic" onSearch={setQuery} />
+          <SearchBar
+            size="md"
+            placeholder="Search by course, creator or topic"
+            onSearch={setQuery}
+          />
         </div>
       </div>
 
@@ -82,7 +101,10 @@ export function CoursesPageClient() {
             />
           ) : (
             <>
-              <p className="mb-4 text-sm text-ink-500">{filtered.length} courses</p>
+              <p className="mb-4 text-sm text-ink-500">
+                {filtered.length} courses
+              </p>
+
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
                 {filtered.map((course) => (
                   <CourseCard key={course.slug} course={course} />
