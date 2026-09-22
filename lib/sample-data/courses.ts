@@ -1,0 +1,383 @@
+import type { Course } from "@/lib/types";
+
+// NOTE: This is realistic sample/placeholder data for building the frontend.
+// Every entry must be re-verified against the live source before this
+// platform goes anywhere near production. Nothing here should be trusted
+// as currently-accurate without that check.
+
+export const courses: Course[] = [
+  {
+    slug: "python-for-beginners-codewithharry",
+    title: "Python Tutorial for Beginners",
+    category: "Python",
+    level: "Beginner",
+    creator: { name: "CodeWithHarry", platform: "YouTube", url: "https://www.youtube.com/@CodeWithHarry", avatarColor: "#0E8C87" },
+    sourceType: "YouTube Playlist",
+    isFree: true,
+    description: "A complete Hindi/English Python playlist covering syntax, data types, functions and OOP basics.",
+    overview:
+      "This playlist takes you from installing Python to writing your own functions and classes. It's built for absolute beginners, with each video focused on a single concept and small exercises to reinforce it before moving on.",
+    durationHours: 24,
+    learners: 184000,
+    rating: 4.7,
+    tags: ["python", "beginner", "hindi-english"],
+    roadmapSteps: [
+      "Set up Python and your editor",
+      "Variables, data types and operators",
+      "Control flow: if/else, loops",
+      "Functions and scope",
+      "Lists, tuples, dictionaries and sets",
+      "File handling",
+      "Intro to OOP in Python"
+    ],
+    resources: [
+      { title: "Full playlist", type: "Video", url: "https://www.youtube.com/@CodeWithHarry" },
+      { title: "Python official docs", type: "Docs", url: "https://docs.python.org/3/" }
+    ],
+    projects: [
+      { title: "Command-line to-do list", description: "Store tasks in a text file and let users add, complete and delete them.", difficulty: "Beginner" },
+      { title: "Number guessing game", description: "Practice loops and conditionals with a simple guessing game.", difficulty: "Beginner" }
+    ],
+    practiceResources: [
+      { title: "HackerRank Python track", url: "https://www.hackerrank.com/domains/python" }
+    ],
+    relatedCertificateSlugs: ["google-it-automation-python"],
+    relatedInternshipIds: ["intern-python-backend-01"],
+    originalUrl: "https://www.youtube.com/@CodeWithHarry",
+    lastVerified: "2026-08-14"
+  },
+  {
+    slug: "java-course-apna-college",
+    title: "Java Programming Course",
+    category: "Java",
+    level: "Beginner",
+    creator: { name: "Apna College", platform: "YouTube", url: "https://www.youtube.com/@ApnaCollegeOfficial", avatarColor: "#F5A623" },
+    sourceType: "YouTube Playlist",
+    isFree: true,
+    description: "Java fundamentals through object-oriented programming, taught with a placement-prep lens.",
+    overview:
+      "Covers Java syntax, OOP concepts, exception handling and collections, with an eye toward what's actually asked in campus placement interviews.",
+    durationHours: 30,
+    learners: 210000,
+    rating: 4.8,
+    tags: ["java", "oop", "placements"],
+    roadmapSteps: [
+      "Java basics and setup",
+      "Control flow and arrays",
+      "Object-oriented programming",
+      "Exception handling",
+      "Collections framework",
+      "Multithreading basics"
+    ],
+    resources: [
+      { title: "Full playlist", type: "Video", url: "https://www.youtube.com/@ApnaCollegeOfficial" },
+      { title: "Java official docs", type: "Docs", url: "https://docs.oracle.com/en/java/" }
+    ],
+    projects: [
+      { title: "Library management system", description: "Console app modeling books, members and borrowing with OOP.", difficulty: "Intermediate" }
+    ],
+    practiceResources: [{ title: "LeetCode Java problems", url: "https://leetcode.com/" }],
+    relatedCertificateSlugs: [],
+    relatedInternshipIds: ["intern-java-backend-02"],
+    originalUrl: "https://www.youtube.com/@ApnaCollegeOfficial",
+    lastVerified: "2026-08-14"
+  },
+  {
+    slug: "dsa-apna-college",
+    title: "DSA Full Course (450 DSA Sheet)",
+    category: "DSA",
+    level: "Intermediate",
+    creator: { name: "Apna College", platform: "YouTube", url: "https://www.youtube.com/@ApnaCollegeOfficial", avatarColor: "#F5A623" },
+    sourceType: "YouTube Playlist",
+    isFree: true,
+    description: "Structured data structures and algorithms series aligned to a well-known 450-question practice sheet.",
+    overview:
+      "Works through arrays, linked lists, trees, graphs and dynamic programming, pairing each topic with curated practice problems so the theory is applied immediately.",
+    durationHours: 60,
+    learners: 156000,
+    rating: 4.8,
+    tags: ["dsa", "interviews", "problem-solving"],
+    roadmapSteps: [
+      "Arrays and strings",
+      "Recursion and backtracking",
+      "Linked lists and stacks/queues",
+      "Trees and binary search trees",
+      "Graphs (BFS/DFS, shortest paths)",
+      "Dynamic programming"
+    ],
+    resources: [{ title: "Full playlist", type: "Video", url: "https://www.youtube.com/@ApnaCollegeOfficial" }],
+    projects: [{ title: "Pathfinding visualizer", description: "Visualize BFS/DFS/Dijkstra on a grid.", difficulty: "Advanced" }],
+    practiceResources: [
+      { title: "450 DSA Sheet", url: "https://www.google.com/search?q=450+dsa+sheet" },
+      { title: "Codeforces", url: "https://codeforces.com/" }
+    ],
+    relatedCertificateSlugs: [],
+    relatedInternshipIds: [],
+    originalUrl: "https://www.youtube.com/@ApnaCollegeOfficial",
+    lastVerified: "2026-08-10"
+  },
+  {
+    slug: "javascript-codewithharry",
+    title: "JavaScript Full Course",
+    category: "JavaScript",
+    level: "Beginner",
+    creator: { name: "CodeWithHarry", platform: "YouTube", url: "https://www.youtube.com/@CodeWithHarry", avatarColor: "#0E8C87" },
+    sourceType: "YouTube Playlist",
+    isFree: true,
+    description: "From variables to the DOM, async/await and fetch — a full introduction to modern JavaScript.",
+    overview:
+      "Designed to take a complete beginner to writing interactive, DOM-driven web pages, ending with an introduction to asynchronous JavaScript and working with APIs.",
+    durationHours: 20,
+    learners: 132000,
+    rating: 4.6,
+    tags: ["javascript", "dom", "web"],
+    roadmapSteps: [
+      "Syntax, variables and functions",
+      "Arrays and objects",
+      "DOM manipulation",
+      "Events",
+      "Async JS: promises and async/await",
+      "Fetch API and JSON"
+    ],
+    resources: [{ title: "Full playlist", type: "Video", url: "https://www.youtube.com/@CodeWithHarry" }],
+    projects: [{ title: "Weather app", description: "Fetch live weather data from a public API and render it.", difficulty: "Beginner" }],
+    practiceResources: [{ title: "JavaScript.info", url: "https://javascript.info/" }],
+    relatedCertificateSlugs: [],
+    relatedInternshipIds: ["intern-frontend-03"],
+    originalUrl: "https://www.youtube.com/@CodeWithHarry",
+    lastVerified: "2026-08-14"
+  },
+  {
+    slug: "html-css-codewithharry",
+    title: "HTML CSS Full Course",
+    category: "HTML/CSS",
+    level: "Beginner",
+    creator: { name: "CodeWithHarry", platform: "YouTube", url: "https://www.youtube.com/@CodeWithHarry", avatarColor: "#0E8C87" },
+    sourceType: "YouTube Playlist",
+    isFree: true,
+    description: "Your first steps into web development: semantic HTML and responsive CSS layouts.",
+    overview:
+      "Starts from a blank page and builds toward flexbox and grid layouts, with small landing-page projects along the way.",
+    durationHours: 12,
+    learners: 98000,
+    rating: 4.6,
+    tags: ["html", "css", "responsive"],
+    roadmapSteps: ["HTML structure and semantics", "CSS box model", "Flexbox", "Grid", "Responsive design basics"],
+    resources: [{ title: "Full playlist", type: "Video", url: "https://www.youtube.com/@CodeWithHarry" }],
+    projects: [{ title: "Portfolio landing page", description: "A single responsive page introducing yourself.", difficulty: "Beginner" }],
+    practiceResources: [{ title: "MDN Web Docs", url: "https://developer.mozilla.org/" }],
+    relatedCertificateSlugs: [],
+    relatedInternshipIds: [],
+    originalUrl: "https://www.youtube.com/@CodeWithHarry",
+    lastVerified: "2026-08-14"
+  },
+  {
+    slug: "sql-freecodecamp",
+    title: "SQL for Beginners",
+    category: "SQL",
+    level: "Beginner",
+    creator: { name: "freeCodeCamp.org", platform: "YouTube", url: "https://www.youtube.com/@freecodecamp", avatarColor: "#343B52" },
+    sourceType: "YouTube Playlist",
+    isFree: true,
+    description: "Relational database fundamentals: querying, joins, and schema design.",
+    overview: "Covers SELECT statements through joins, subqueries and basic normalization, using a real sample database throughout.",
+    durationHours: 8,
+    learners: 76000,
+    rating: 4.7,
+    tags: ["sql", "databases"],
+    roadmapSteps: ["SELECT, WHERE, ORDER BY", "Joins", "Aggregation and GROUP BY", "Subqueries", "Schema design basics"],
+    resources: [{ title: "Full video", type: "Video", url: "https://www.youtube.com/@freecodecamp" }],
+    projects: [{ title: "Movie database queries", description: "Write queries against a sample movies dataset.", difficulty: "Beginner" }],
+    practiceResources: [{ title: "SQLZoo", url: "https://sqlzoo.net/" }],
+    relatedCertificateSlugs: [],
+    relatedInternshipIds: [],
+    originalUrl: "https://www.youtube.com/@freecodecamp",
+    lastVerified: "2026-08-05"
+  },
+  {
+    slug: "full-stack-web-dev-apna-college",
+    title: "Full Stack Web Development (MERN)",
+    category: "Full Stack",
+    level: "Intermediate",
+    creator: { name: "Apna College", platform: "YouTube", url: "https://www.youtube.com/@ApnaCollegeOfficial", avatarColor: "#F5A623" },
+    sourceType: "YouTube Playlist",
+    isFree: true,
+    description: "MongoDB, Express, React and Node — build and deploy a full stack application.",
+    overview:
+      "Assumes basic JavaScript and walks through building a REST API with Express and MongoDB, then a React frontend that consumes it, ending with deployment.",
+    durationHours: 40,
+    learners: 121000,
+    rating: 4.7,
+    tags: ["mern", "react", "node", "mongodb"],
+    roadmapSteps: [
+      "Node.js and Express basics",
+      "REST API design",
+      "MongoDB and Mongoose",
+      "React fundamentals",
+      "Connecting frontend and backend",
+      "Authentication",
+      "Deployment"
+    ],
+    resources: [{ title: "Full playlist", type: "Video", url: "https://www.youtube.com/@ApnaCollegeOfficial" }],
+    projects: [{ title: "Full stack blog platform", description: "Users can register, write and read posts.", difficulty: "Intermediate" }],
+    practiceResources: [{ title: "React official docs", url: "https://react.dev/" }],
+    relatedCertificateSlugs: ["meta-frontend-developer"],
+    relatedInternshipIds: ["intern-fullstack-04"],
+    originalUrl: "https://www.youtube.com/@ApnaCollegeOfficial",
+    lastVerified: "2026-08-12"
+  },
+  {
+    slug: "machine-learning-andrew-ng",
+    title: "Machine Learning Specialization",
+    category: "AI/ML",
+    level: "Intermediate",
+    creator: { name: "DeepLearning.AI / Andrew Ng", platform: "Coursera", url: "https://www.coursera.org/specializations/machine-learning-introduction", avatarColor: "#0E8C87" },
+    sourceType: "Official Course",
+    isFree: false,
+    description: "The classic, rigorous introduction to supervised and unsupervised learning.",
+    overview:
+      "A three-course specialization covering regression, classification, neural networks and unsupervised learning, taught with both intuition and math. Free to audit; a fee applies for a certificate.",
+    durationHours: 100,
+    learners: 4300000,
+    rating: 4.9,
+    tags: ["machine-learning", "coursera", "andrew-ng"],
+    roadmapSteps: [
+      "Linear and logistic regression",
+      "Neural networks",
+      "Decision trees",
+      "Unsupervised learning and clustering",
+      "Recommender systems",
+      "Reinforcement learning basics"
+    ],
+    resources: [{ title: "Course page", type: "Docs", url: "https://www.coursera.org/specializations/machine-learning-introduction" }],
+    projects: [{ title: "House price predictor", description: "Regression model on a housing dataset.", difficulty: "Intermediate" }],
+    practiceResources: [{ title: "Kaggle Learn", url: "https://www.kaggle.com/learn" }],
+    relatedCertificateSlugs: ["deeplearning-ai-ml-specialization"],
+    relatedInternshipIds: ["intern-ml-05"],
+    originalUrl: "https://www.coursera.org/specializations/machine-learning-introduction",
+    lastVerified: "2026-07-28"
+  },
+  {
+    slug: "data-science-freecodecamp",
+    title: "Data Analysis with Python",
+    category: "Data Science",
+    level: "Beginner",
+    creator: { name: "freeCodeCamp.org", platform: "YouTube", url: "https://www.youtube.com/@freecodecamp", avatarColor: "#343B52" },
+    sourceType: "YouTube Playlist",
+    isFree: true,
+    description: "Pandas, NumPy and data visualization for real analysis work.",
+    overview: "Hands-on with pandas and NumPy for cleaning and exploring datasets, plus Matplotlib for visualization.",
+    durationHours: 10,
+    learners: 89000,
+    rating: 4.6,
+    tags: ["pandas", "numpy", "data-analysis"],
+    roadmapSteps: ["NumPy basics", "Pandas Series and DataFrames", "Data cleaning", "Visualization with Matplotlib", "Exploratory data analysis"],
+    resources: [{ title: "Full video", type: "Video", url: "https://www.youtube.com/@freecodecamp" }],
+    projects: [{ title: "COVID dataset exploration", description: "Clean and visualize a public health dataset.", difficulty: "Beginner" }],
+    practiceResources: [{ title: "Kaggle datasets", url: "https://www.kaggle.com/datasets" }],
+    relatedCertificateSlugs: ["google-data-analytics"],
+    relatedInternshipIds: [],
+    originalUrl: "https://www.youtube.com/@freecodecamp",
+    lastVerified: "2026-08-01"
+  },
+  {
+    slug: "aws-cloud-practitioner-freecodecamp",
+    title: "AWS Cloud Practitioner Essentials",
+    category: "Cloud",
+    level: "Beginner",
+    creator: { name: "freeCodeCamp.org", platform: "YouTube", url: "https://www.youtube.com/@freecodecamp", avatarColor: "#343B52" },
+    sourceType: "YouTube Playlist",
+    isFree: true,
+    description: "Core AWS services and cloud concepts, aligned to the Cloud Practitioner exam objectives.",
+    overview: "Introduces EC2, S3, IAM, and billing fundamentals, framed around the topics tested on the entry-level AWS certification.",
+    durationHours: 14,
+    learners: 61000,
+    rating: 4.5,
+    tags: ["aws", "cloud", "certification-prep"],
+    roadmapSteps: ["Cloud concepts", "Core services: EC2, S3, VPC", "IAM and security", "Billing and pricing", "Practice exam questions"],
+    resources: [{ title: "Full video", type: "Video", url: "https://www.youtube.com/@freecodecamp" }],
+    projects: [{ title: "Host a static site on S3", description: "Deploy a simple site using S3 static hosting.", difficulty: "Beginner" }],
+    practiceResources: [{ title: "AWS Skill Builder", url: "https://skillbuilder.aws/" }],
+    relatedCertificateSlugs: ["aws-cloud-practitioner"],
+    relatedInternshipIds: ["intern-cloud-06"],
+    originalUrl: "https://www.youtube.com/@freecodecamp",
+    lastVerified: "2026-07-20"
+  },
+  {
+    slug: "cybersecurity-basics-freecodecamp",
+    title: "Cybersecurity Fundamentals",
+    category: "Cybersecurity",
+    level: "Beginner",
+    creator: { name: "freeCodeCamp.org", platform: "YouTube", url: "https://www.youtube.com/@freecodecamp", avatarColor: "#343B52" },
+    sourceType: "YouTube Playlist",
+    isFree: true,
+    description: "Networking basics, common attack types, and defensive fundamentals.",
+    overview: "Introduces networking concepts, then walks through common vulnerabilities and how to defend against them, without requiring prior security experience.",
+    durationHours: 15,
+    learners: 54000,
+    rating: 4.5,
+    tags: ["security", "networking"],
+    roadmapSteps: ["Networking fundamentals", "Common attack types", "Cryptography basics", "Web application security", "Intro to ethical hacking tools"],
+    resources: [{ title: "Full video", type: "Video", url: "https://www.youtube.com/@freecodecamp" }],
+    projects: [{ title: "Home network audit", description: "Document and harden your own network setup.", difficulty: "Beginner" }],
+    practiceResources: [{ title: "TryHackMe", url: "https://tryhackme.com/" }],
+    relatedCertificateSlugs: ["ibm-cybersecurity-analyst"],
+    relatedInternshipIds: [],
+    originalUrl: "https://www.youtube.com/@freecodecamp",
+    lastVerified: "2026-07-15"
+  },
+  {
+    slug: "c-programming-codewithharry",
+    title: "C Programming Course",
+    category: "C",
+    level: "Beginner",
+    creator: { name: "CodeWithHarry", platform: "YouTube", url: "https://www.youtube.com/@CodeWithHarry", avatarColor: "#0E8C87" },
+    sourceType: "YouTube Playlist",
+    isFree: true,
+    description: "The foundational language for understanding memory, pointers and how computers actually work.",
+    overview: "Covers syntax, pointers, arrays, structures and basic file I/O — the fundamentals most other languages build on.",
+    durationHours: 18,
+    learners: 87000,
+    rating: 4.6,
+    tags: ["c", "pointers", "fundamentals"],
+    roadmapSteps: ["Syntax and variables", "Control flow", "Functions", "Arrays and strings", "Pointers", "Structures", "File handling"],
+    resources: [{ title: "Full playlist", type: "Video", url: "https://www.youtube.com/@CodeWithHarry" }],
+    projects: [{ title: "Simple student record system", description: "Store and search records using structs and files.", difficulty: "Beginner" }],
+    practiceResources: [{ title: "HackerRank C track", url: "https://www.hackerrank.com/domains/c" }],
+    relatedCertificateSlugs: [],
+    relatedInternshipIds: [],
+    originalUrl: "https://www.youtube.com/@CodeWithHarry",
+    lastVerified: "2026-08-14"
+  },
+  {
+    slug: "cpp-apna-college",
+    title: "C++ Programming Course",
+    category: "C++",
+    level: "Beginner",
+    creator: { name: "Apna College", platform: "YouTube", url: "https://www.youtube.com/@ApnaCollegeOfficial", avatarColor: "#F5A623" },
+    sourceType: "YouTube Playlist",
+    isFree: true,
+    description: "C++ fundamentals through STL, built for competitive programming and interviews.",
+    overview: "Covers core syntax, OOP, and the Standard Template Library, with an emphasis on the patterns used in coding interviews.",
+    durationHours: 25,
+    learners: 143000,
+    rating: 4.8,
+    tags: ["cpp", "stl", "competitive-programming"],
+    roadmapSteps: ["Syntax and I/O", "OOP in C++", "STL containers", "STL algorithms", "Competitive programming patterns"],
+    resources: [{ title: "Full playlist", type: "Video", url: "https://www.youtube.com/@ApnaCollegeOfficial" }],
+    projects: [{ title: "Inventory management CLI", description: "Practice classes and STL containers.", difficulty: "Intermediate" }],
+    practiceResources: [{ title: "Codeforces", url: "https://codeforces.com/" }],
+    relatedCertificateSlugs: [],
+    relatedInternshipIds: [],
+    originalUrl: "https://www.youtube.com/@ApnaCollegeOfficial",
+    lastVerified: "2026-08-10"
+  }
+];
+
+export function getCourseBySlug(slug: string): Course | undefined {
+  return courses.find((c) => c.slug === slug);
+}
+
+export function getRelatedCourses(course: Course, limit = 3): Course[] {
+  return courses.filter((c) => c.category === course.category && c.slug !== course.slug).slice(0, limit);
+}

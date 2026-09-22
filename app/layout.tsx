@@ -1,0 +1,73 @@
+import type { Metadata } from "next";
+import { Sora, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import "./globals.css";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+
+const sora = Sora({
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+  variable: "--font-sora",
+  display: "swap"
+});
+
+const plexSans = IBM_Plex_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-plex",
+  display: "swap"
+});
+
+const plexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-plex-mono",
+  display: "swap"
+});
+
+export const metadata: Metadata = {
+  title: {
+    default: "BlockHub — Learn. Build. Grow.",
+    template: "%s | BlockHub"
+  },
+  description:
+    "BlockHub helps students discover courses, projects, certificates, internships and career roadmaps — all in one place.",
+  keywords: [
+    "BlockHub",
+    "student learning platform",
+    "free programming courses",
+    "career roadmaps",
+    "student internships",
+    "programming certificates",
+    "college students",
+    "coding courses"
+  ],
+  authors: [{ name: "Sumit Bachhaniya" }],
+  creator: "Sumit Bachhaniya",
+  applicationName: "BlockHub"
+};
+
+export default function RootLayout({
+  children
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html
+      lang="en"
+      className={`${sora.variable} ${plexSans.variable} ${plexMono.variable}`}
+    >
+      <body className="font-body">
+        <div className="flex min-h-screen flex-col">
+          <Navbar />
+
+          <main className="flex-1">
+            {children}
+          </main>
+
+          <Footer />
+        </div>
+      </body>
+    </html>
+  );
+}
